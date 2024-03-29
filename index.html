@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sono&display=swap">
+
+    <style>
+        body {
+            font-family: 'Sono', sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+    <form id="myForm">
+        <a href="https://kppolice.gov.pk/" target="_blank"> <img src="logo.png" alt="Police-logo" height="100px" width="100px" style="display: block; margin: auto;"> </a>
+        <h1 style="text-align: center;">Challan Form</h1>
+
+        <!-- Manually input ID field -->
+        <label for="manualIdField">Manual ID:</label>
+        <input type="text" id="manualIdField" placeholder="Enter manual ID">
+
+        <label for="nameField">Name:</label>
+        <input type="text" id="nameField" placeholder="Enter your name" required>
+
+        <label for="regNumberField">Registration Number:</label>
+        <input type="text" id="regNumberField" placeholder="Enter registration number" required>
+
+        <label for="codeField">Code:</label>
+        <input type="text" id="codeField" placeholder="Enter code" required>
+
+        <label for="amountField">Amount:</label>
+        <input type="number" id="amountField" placeholder="Enter amount" required>
+
+        <label for="feeField">Fee:</label>
+        <input type="text" id="feeField" value="17" readonly>
+
+        <label for="receivedByField">Received By:</label>
+        <input type="text" id="receivedByField" placeholder="Enter receiver's name">
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <div id="displayPage" class="hidden">
+        <!-- Display submitted data, QR code, and current date and time -->
+        <div id="displayData"></div>
+        <div id="qrCode"></div>
+<br>
+<br>
+<br>
+
+<div id="dateTime"></div>
+        <button id="printButton" class="print-btn" onclick="printDisplayPage()">Print</button>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+</body>
+</html>
